@@ -1,0 +1,71 @@
+		#fb1{
+				width:520px;
+				overflow: hidden;
+				font-family: Arial, Helvetica, sans-serif;
+				background:#eee;
+		}
+		
+		#access .menu-header, div.menu, #colophon, #branding, #main, #wrapper {
+    			margin: 0 auto;
+    			width: 520px !important;
+		}
+		#wrapper{
+			width:520px;
+			padding: 0;
+			overflow-x: hidden;
+		}
+		
+		#wpadminbar{
+			display:none;
+		}
+		
+		#site-title {
+   		font-size: 24px;
+    		line-height: 36px;
+    		width:520px;
+    		
+		}
+		#site-description{
+			float:left;
+		}
+		
+		#fbimgbanner{
+			max-width:520px !important;
+			width: auto;
+			float:none;
+			display:block;
+		}
+		#container {
+    	float: left;
+    	margin: 0 0 0 0;
+    	width: 100%;
+		}
+		
+		#content, #content input, #content textarea {
+    		color: #333333;
+    		font-size: 12px;
+    		line-height: 18px;
+		}
+
+		.one-column #content {
+    		margin: 0 auto;
+    		width: 520px;
+		}
+
+		#site-info {
+    		float: left;
+    		font-size: 14px;
+    		font-weight: bold;
+    		width: 520px;
+		}
+		
+		
+		#fbcommentbox{
+			width:500px;
+			margin:0 auto;
+		}
+			.fb_iframe_widget_loader {
+				width:500px;
+				margin:0 auto;
+				}
+		
