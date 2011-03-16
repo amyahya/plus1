@@ -60,6 +60,27 @@
 		}
 		
 		
+		.liked, .unliked{
+			width:400px;
+			padding: 10px;
+			margin: 20px auto;
+			font: bold 1.3em/2em Geneva, Helvetica, sans-serif;
+			color:#808080;
+			border : 2px solid #bbb;
+			background: #f0f0f0;
+			}
+		
+			.liked .rewards{
+				display:block;
+				width: 300px;
+				padding: 12px;
+				margin: 0 auto;
+				background: #f90;
+				color: #fff;
+				text-decoration:none;
+				}
+		.unliked{}
+		
 		#fbcommentbox{
 			width:500px;
 			margin:0 auto;

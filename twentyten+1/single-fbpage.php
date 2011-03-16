@@ -8,7 +8,6 @@
  * @subpackage Twenty_Ten
  * @since Twenty Ten 1.0
  */
-
 ?>
 
 <!-- header -->
@@ -42,6 +41,27 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/fbstyle.css" />
 
 <!-- <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" /> -->
+
+<?php 
+					//getting fbcredential from custom fields
+					$myfbapp = get_post_meta($post->ID,'_myfbapp',TRUE);
+					$fbappid = $myfbapp['app_id'];
+					$fbsecret = $myfbapp['app_secret'];
+					$fbapikey = $myfbapp['api_key'];
+					
+					//loading facebook phpsdk
+					require ( get_stylesheet_directory().'/facebook.php');
+
+					//loading phpsdk	
+					$app_id = $fbappid;
+					$app_secret = $fbsecret;
+
+					$facebook = new Facebook(array(
+							'appId' => $app_id,
+							'secret' => $app_secret,
+							'cookie' => true
+					));
+					?>
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
@@ -86,9 +106,20 @@ FB.Canvas.setSize();
 
 <body <?php body_class(); ?> id="fb1" >
 
+<!-- fbook load js sdk -->
+	<div id="fb-root"></div>
+	<script src="http://connect.facebook.net/en_US/all.js"></script>
+	<script>
+	FB.init({
+	appId : <?php echo $fbappid; ?>,
+	status : true, // check login status
+	cookie : true, // enable cookies to allow the server to access the session
+	xfbml : true // parse XFBML
+	});
+	</script>
 
+<strong style="color:red;">	This page is still under development ( currently used for collaborating the dev ). I'm attempting to create wordpress (child) theme to enable wordpress site with twentyten theme to easily create facebook fan pages. If u're a coder : <a target="_blank" href="https://github.com/amyahya/plus1">fork it on github</a></strong>
 <div id="wrapper" class="hfeed">
-
 	<div id="main">
 
 <!-- header end -->
@@ -119,86 +150,40 @@ FB.Canvas.setSize();
 
 					<div class="entry-content">
 					
-					<?php 
-					//getting fbcredential from custom fields
-					/*$fbappid = get_post_meta($post->ID, 'plus1_fb_app_id', true);
-					$fbsecret = get_post_meta($post->ID, 'plus1_fb_app_secret', true);
-					$fbapikey = get_post_meta($post->ID, 'plus1_fb_api_key', true);
-					*/
-					$myfbapp = get_post_meta($post->ID,'_myfbapp',TRUE);
-					$fbappid = $myfbapp['app_id'];
-					$fbsecret = $myfbapp['api_key'];
-					$fbapikey = $myfbapp['app_secret'];
-					
-					//loading facebook phpsdk
-					require ( get_stylesheet_directory().'/facebook.php');
-
-					//loading phpsdk	
-					$app_id = $fbappid;
-					$app_secret = $fbsecret;
-					$facebook = new Facebook(array(
-							'appId' => $app_id,
-							'secret' => $app_secret,
-							'cookie' => true
-					));
-
-					?>
-						
-					
-					<h2>Custom Field Check</h2>
-					<?php 
-						echo ('<h3>'.$fbappid.'</h3>');
-						
-							//$key = 'plus1_fb_app_id';
-							//$themeta = get_post_meta($post->ID, $key, TRUE);
-							//$fbappid = get_post_meta($post->ID, $key, true);
-							if($fbappid != '') {
-							echo '<h2>IT EXIST : '.$fbappid .'</h2>';
-							}
-							
-						?>
-					<h2>Cust field check end.</h2>	
-					
-					<!-- fbook load js sdk -->
-					<div id="fb-root"></div>
-					<script src="http://connect.facebook.net/en_US/all.js"></script>
-					<script>
-					FB.init({
-					appId : <?php echo $fbappid; ?>,
-					status : true, // check login status
-					cookie : true, // enable cookies to allow the server to access the session
-					xfbml : true // parse XFBML
-					});
-					</script>
-					
 					<!-- fb stuff -->
 					
-					Loading fb sdk check :
+					<!-- Loading fb sdk check : -->
 					
 					<?php
+					
 					$signed_request = $facebook->getSignedRequest();
-
+					
+					
 					$page_id = $signed_request["page"]["id"];
 					$page_admin = $signed_request["page"]["admin"];
 					$like_status = $signed_request["page"]["liked"];
 					$country = $signed_request["user"]["country"];
 					$locale = $signed_request["user"]["locale"];
-
+					
+					
+					//checking
+					/*
 					echo "<br>page id = $page_id";
 					echo "<br>page admin = $page_admin";
 					echo "<br>like status = $like_status";
 					echo "<br>country = $country";
 					echo "<br>locale = $locale";
+					*/
 					?>
+					<h3>Fan-Gating Simulation</h3>
 					<?php 
 					if ($like_status) {
-						echo "<div> Thanks for liking us : <a href=\"#\"> Clickhere to download this page source </a></div>";
+						echo '<div class="liked">Thanks for liking us : <a class="rewards" href="#"> Clickhere to get your rewards :D </a></div>';
 						}
 						else {
-						echo "<div> Yeah, we like you. It sad you haven't like us. Please Like us to download this page source. </div>";
+						echo '<div class="unliked"> Hey, we\'ve already like you. It sad you haven\'t like us. Please "Like" us back to get your rewards :) </div>';
 						}
 					?>
-					<fb:like href="http://www.facebook.com/pages/1/202918663053267?sk=app_191016167605109" layout="button_count" show_faces="false" width="300" font="trebuchet ms"></fb:like>
 					</script>
 					<div id="dlthis" style="display:none;">Download This</div>
 					
@@ -213,9 +198,7 @@ FB.Canvas.setSize();
 
 			<?php endwhile; // end of the loop. ?>
 			<div style="clear:both"></div>
-			<div id="fbcommentbox">
-			<fb:comments href="http://www.facebook.com/pages/1/202918663053267" num_posts="17" width="500"></fb:comments>
-				</div>
+			
 			
 			</div><!-- #content -->
 		</div><!-- #container -->
@@ -260,23 +243,6 @@ FB.Canvas.setSize();
 
 	wp_footer();
 ?>
-
-
-
-
-<!--<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({appId: '194398987247316', status: true, cookie: true,
-             xfbml: true});
-  };
-  (function() {
-    var e = document.createElement('script'); e.async = true;
-    e.src = document.location.protocol +
-      '//connect.facebook.net/en_US/all.js';
-    document.getElementById('fb-root').appendChild(e);
-  }());
-</script>-->
 
 </body>
 </html>
