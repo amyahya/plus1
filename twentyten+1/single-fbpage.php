@@ -43,6 +43,7 @@
 <!-- <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" /> -->
 
 <?php 
+	
 					//getting fbcredential from custom fields
 					$myfbapp = get_post_meta($post->ID,'_myfbapp',TRUE);
 					$fbappid = $myfbapp['app_id'];
@@ -61,6 +62,9 @@
 							'secret' => $app_secret,
 							'cookie' => true
 					));
+					
+					//global $fbappid, $fbsecret, $fbapikey, $facebook ;
+					
 					?>
 <?php
 	/* We add some JavaScript to pages with the comment form
@@ -68,12 +72,13 @@
 	 */
 	if ( is_singular() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
-
+		
 	/* Always have wp_head() just before the closing </head>
 	 * tag of your theme, or you will break many plugins, which
 	 * generally use this hook to add elements to <head> such
 	 * as styles, scripts, and meta tags.
 	 */
+	 
 	wp_enqueue_script("jquery"); 
 	wp_head();
 ?>
@@ -96,6 +101,7 @@ FB.Event.subscribe('edge.create', function(href, widget) {
     $('#dlthis').show();
  });
 }
+
 // Do things that will sometimes call sizeChangeCallback()
 function sizeChangeCallback() {
 FB.Canvas.setSize();
@@ -156,12 +162,12 @@ FB.Canvas.setSize();
 					
 					<?php
 					
+					// setting some useful variables 
 					$signed_request = $facebook->getSignedRequest();
-					
 					
 					$page_id = $signed_request["page"]["id"];
 					$page_admin = $signed_request["page"]["admin"];
-					$like_status = $signed_request["page"]["liked"];
+					$like_status = $signed_request["page"]["liked"]; // used by fan gating shortcodes function
 					$country = $signed_request["user"]["country"];
 					$locale = $signed_request["user"]["locale"];
 					
@@ -175,16 +181,16 @@ FB.Canvas.setSize();
 					echo "<br>locale = $locale";
 					*/
 					?>
-					<h3>Fan-Gating Simulation</h3>
+					<!--<h3>Fan-Gating Simulation</h3>-->
 					<?php 
-					if ($like_status) {
+					/*if ($like_status) {
 						echo '<div class="liked">Thanks for liking us : <a class="rewards" href="#"> Clickhere to get your rewards :D </a></div>';
 						}
 						else {
 						echo '<div class="unliked"> Hey, we\'ve already like you. It sad you haven\'t like us. Please "Like" us back to get your rewards :) </div>';
-						}
+						}*/
 					?>
-					</script>
+					
 					<div id="dlthis" style="display:none;">Download This</div>
 					
 					
@@ -194,9 +200,11 @@ FB.Canvas.setSize();
 					</div><!-- .entry-content -->
 				</div><!-- #post-## -->
 
-				<?php //comments_template( '', true ); ?>
+				<?php comments_template( '', true ); ?>
 
-			<?php endwhile; // end of the loop. ?>
+			<?php endwhile; 
+			// end of the loop. 
+			?>
 			<div style="clear:both"></div>
 			
 			
@@ -212,11 +220,11 @@ FB.Canvas.setSize();
 	<div id="footer" role="contentinfo">
 		<div id="colophon">
 
-<?php
-	/* A sidebar in the footer? Yep. You can can customize
+<?phP
+	/* A sidebar in the footer? Yep. You can customize
 	 * your footer with four columns of widgets.
 	 */
-	get_sidebar( 'footer' );
+	//get_sidebar( 'footer' );
 ?>
 
 			<div id="site-info">
