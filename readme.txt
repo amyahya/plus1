@@ -5,11 +5,12 @@ Intro
 =======
 This is a child theme to enable owner of wordpress site with twentyten theme to create Facebook Page with ease. 
 
-This is still on development process, don't use it on your live site. If u're wordpress wizard, php ninjas, or other superhero i'm welcoming any suggestion :)
 
-If u're feeling adventurous or curious here's the step :
+------
+Install
+=======
 
-- Install like u're installing wp-theme. Make sure u got the needed parent theme twentyten ( currently wp's default ). Then activate it. ( currently i'm using wp 3.1 , so i don't know how it'll behave on 3.0 or below )
+- Install like u're installing wp-theme. Though i doubt you need to check it but make sure u got the needed parent theme twentyten ( currently wp's default ). Then activate it. ( currently i'm using wp 3.1 , so i don't know how it'll behave on 3.0++ or before )
 
 - After that u'll see there's new post type called "Facebook Pages" ( on the sidebar). Here you could create your pages content.
 
@@ -18,7 +19,7 @@ If u're feeling adventurous or curious here's the step :
 
 - If you haven't had Fb Page, & Fb App for it, create it. Check out this tutorial if u don't know what i mean : http://www.hyperarts.com/blog/adding-iframe-application-to-facebook-fan-page/
 
-- Take not on your Fb App Credentials (app id, app secret, api key ). And fill it on the appropriate field on your page.
+- Take note on your Fb App Credentials (app id, app secret, api key ). And fill it on the appropriate field on your page.
 
 
 - good luck -
@@ -52,6 +53,8 @@ for user that liked the page ( fans ) : "Thanks for liking us, we love you!"
 ------------
 Changelog 
 ============
+
+20110415 : add yui3 support, set ver 0.9b
 
 20110404 : adding shortcodes for fan gating
 
