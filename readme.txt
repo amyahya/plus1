@@ -10,12 +10,18 @@ This is a child theme to enable owner of wordpress site with twentyten theme to 
 Install
 =======
 
+Checkout 
+The tutorial ( screencast ) : 
+- http://www.facebook.com/video/video.php?v=10150224214822578
+- or http://vimeo.com/22432694
+
+Step-by-step :
+
 - Install like u're installing wp-theme. Though i doubt you need to check it but make sure u got the needed parent theme twentyten ( currently wp's default ). Then activate it. ( currently i'm using wp 3.1 , so i don't know how it'll behave on 3.0++ or before )
 
 - After that u'll see there's new post type called "Facebook Pages" ( on the sidebar). Here you could create your pages content.
 
 - Create your page contents by creating new page on "Facebook Pages" on your wordpress.
-
 
 - If you haven't had Fb Page, & Fb App for it, create it. Check out this tutorial if u don't know what i mean : http://www.hyperarts.com/blog/adding-iframe-application-to-facebook-fan-page/
 
@@ -27,6 +33,7 @@ Install
 ps.
 
 - sample fb page : http://www.facebook.com/pages/1/202918663053267
+
 
 
 
