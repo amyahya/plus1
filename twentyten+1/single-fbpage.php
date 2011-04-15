@@ -39,6 +39,13 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/fbstyle.css" />
+<!-- loading yui grid -->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssgrids/grids-min.css">
+
+<!-- special treatment for the lovely wild browser -->
+<!--[if lte ie 7]>
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/ie.css" />
+<![endif]-->
 
 <!-- <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" /> -->
 
@@ -73,12 +80,6 @@
 	if ( is_singular() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 		
-	/* Always have wp_head() just before the closing </head>
-	 * tag of your theme, or you will break many plugins, which
-	 * generally use this hook to add elements to <head> such
-	 * as styles, scripts, and meta tags.
-	 */
-	 
 	wp_enqueue_script("jquery"); 
 	wp_head();
 ?>
@@ -124,7 +125,6 @@ FB.Canvas.setSize();
 	});
 	</script>
 
-<strong style="color:red;">	This page is still under development ( currently used for collaborating the dev ). I'm attempting to create wordpress (child) theme to enable wordpress site with twentyten theme to easily create facebook fan pages. If u're a coder : <a target="_blank" href="https://github.com/amyahya/plus1">fork it on github</a></strong>
 <div id="wrapper" class="hfeed">
 	<div id="main">
 
@@ -148,20 +148,14 @@ FB.Canvas.setSize();
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php if ( is_front_page() ) { ?>
-						<h2 class="entry-title"><?php the_title(); ?></h2>
-					<?php } else { ?>
+					<?php if ( $myfbapp['showtitle'] == 'showtitle' ) { ?>
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 					<?php } ?>
 
 					<div class="entry-content">
 					
-					<!-- fb stuff -->
-					
-					<!-- Loading fb sdk check : -->
-					
+					<!-- fb stuff -->	<!-- Loading fb sdk check : -->
 					<?php
-					
 					// setting some useful variables 
 					$signed_request = $facebook->getSignedRequest();
 					
@@ -170,33 +164,11 @@ FB.Canvas.setSize();
 					$like_status = $signed_request["page"]["liked"]; // used by fan gating shortcodes function
 					$country = $signed_request["user"]["country"];
 					$locale = $signed_request["user"]["locale"];
-					
-					
-					//checking
-					/*
-					echo "<br>page id = $page_id";
-					echo "<br>page admin = $page_admin";
-					echo "<br>like status = $like_status";
-					echo "<br>country = $country";
-					echo "<br>locale = $locale";
-					*/
 					?>
-					<!--<h3>Fan-Gating Simulation</h3>-->
-					<?php 
-					/*if ($like_status) {
-						echo '<div class="liked">Thanks for liking us : <a class="rewards" href="#"> Clickhere to get your rewards :D </a></div>';
-						}
-						else {
-						echo '<div class="unliked"> Hey, we\'ve already like you. It sad you haven\'t like us. Please "Like" us back to get your rewards :) </div>';
-						}*/
-					?>
-					
-					<div id="dlthis" style="display:none;">Download This</div>
-					
 					
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
-						<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php // edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-content -->
 				</div><!-- #post-## -->
 
@@ -220,17 +192,10 @@ FB.Canvas.setSize();
 	<div id="footer" role="contentinfo">
 		<div id="colophon">
 
-<?phP
-	/* A sidebar in the footer? Yep. You can customize
-	 * your footer with four columns of widgets.
-	 */
-	//get_sidebar( 'footer' );
-?>
-
 			<div id="site-info">
 				<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php bloginfo( 'name' ); ?>
-				</a>
+				</a> | <small>coder ? : <a target="_blank" href="https://github.com/amyahya/plus1">fork this on github</a></small>
 			</div><!-- #site-info -->
 
 			<div id="site-generator">
@@ -243,14 +208,7 @@ FB.Canvas.setSize();
 
 </div><!-- #wrapper -->
 
-<?php
-	/* Always have wp_footer() just before the closing </body>
-	 * tag of your theme, or you will break many plugins, which
-	 * generally use this hook to reference JavaScript files.
-	 */
-
-	wp_footer();
-?>
+<?php	wp_footer(); ?>
 
 </body>
 </html>

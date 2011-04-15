@@ -1,6 +1,6 @@
 		#fb1{
 				width:520px;
-				overflow: hidden;
+				/*overflow: hidden;*/
 				font-family: Arial, Helvetica, sans-serif;
 				background:#eee;
 		}
@@ -13,6 +13,15 @@
 			width:520px;
 			padding: 0;
 			overflow-x: hidden;
+		}
+		
+		#main{
+			padding:0;
+		}
+		
+		#content{
+			margin:0;
+			padding:0;
 		}
 		
 		#wpadminbar{
@@ -28,6 +37,13 @@
 		#site-description{
 			float:left;
 		}
+		
+		.entry-content{
+		   padding:0;
+			vertical-align:top;
+			position: relative;
+		}
+		
 		
 		#fbimgbanner{
 			max-width:520px !important;
@@ -59,27 +75,7 @@
     		width: 520px;
 		}
 		
-		
-		.liked, .unliked{
-			width:400px;
-			padding: 10px;
-			margin: 20px auto;
-			font: bold 1.3em/2em Geneva, Helvetica, sans-serif;
-			color:#808080;
-			border : 2px solid #bbb;
-			background: #f0f0f0;
-			}
-		
-			.liked .rewards{
-				display:block;
-				width: 300px;
-				padding: 12px;
-				margin: 0 auto;
-				background: #f90;
-				color: #fff;
-				text-decoration:none;
-				}
-		.unliked{}
+	
 		
 		#fbcommentbox{
 			width:500px;
@@ -89,4 +85,94 @@
 				width:500px;
 				margin:0 auto;
 				}
+
+
+/*base skin*/
+/*util*/
+.clear{
+	clear:both;
+}
+hr.clear, #content hr.clear{
+	height:0px;
+	margin: 0;
+	padding:0;
+	border: none transparent;
+}
+
+.fleft, .alignleft, img.alignleft{
+	float:left;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+.fright, .alignright, img.alignright {
+	float:right;
+	margin-left: 10px;
+	margin-bottom:10px;
+}
+img{
+	vertical-align:middle;
+}
+a img{
+	border:none transparent;
+}
+/*layout*/
+#fb1 #wrapper{
+	background:#f0f0f0 url("https://sites.google.com/site/pushlabplus1/files/bg.png") repeat;
+	border-top: 2px solid #111;
+}
+.fbcont { /*content start*/
+	padding-top:20px;
+	float:left;
+}
+.maincol{
+	width:320px;
+	}
+	#content .maincol h2, #content .maincol h3, #content .maincol h4 {
+		clear:none;
+		margin-bottom: 10px;
+	}
+.sidecol{
+	width:180px;
+	}
+	.sidecol.right{
+		margin-left:18px;
+	}
+	.sidecol.left{
+		margin-right:18px;
+	}
+
+#likeus{
+	background-color:#900;
+	border-bottom: 2px solid #C00;
+	color:#fff;
+	padding:10px;
+	width:500px;
+	height:81px;
+	margin:0;
+}
+#likeus_txt{
+	margin-top:28px;
+}
+	#likeus .shout{
+		font-size:18px;
+		font-weight:bold;
+		margin:0px;
+	}
+	#likeus .sub{
+		font-size:12px;
+	}
+	
+/*fan gating*/
+	
+		.liked, .unliked{
+			
+			font: normal 1em/1.5em Geneva, Helvetica, sans-serif;
+			color:#808080;
 		
+			}
+		
+			.liked .rewards{
+				
+				}
+		.unliked{}	
