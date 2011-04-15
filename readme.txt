@@ -41,7 +41,13 @@ ps.
 How to
 =======
 
+Turn of the Wysiwyg editor
+--------------------------------------
+To have a better handle on the page content, turn off the visual/wysiwyg editor ( on user setting ). This will enable us to insert embed code, & other htmls. Since sometime the visual editor would strip it ( e.g the embed code of youtube vid )
+
+
 Add fan gating ( reveal tab for fans )
+---------------------------------------
 
 On the wordpress editor add enclosing shortcode = [liked] , fill the content with what you want to be shown to user that had liked the page,
 On the wordpress editor add enclosing shortcode = [unliked] , fill the content with what you want to be shown to user that hadn't liked the page ( or when viewed unlogged user ).
@@ -56,12 +62,18 @@ for user that haven't liked the page : "Hey, we've  like you already. It sad you
 for user that liked the page ( fans ) : "Thanks for liking us, we love you!"
 
 
+Creating just like the +1 page
+----------------------------------------
+- Open the sample-content.html on the twentyten+1 folder
+- Create/edit the facebook page on wp-admin, copy the code from sample-content.html to the main text-input area.
+- publish and check how it looks on your fb page.
+
 
 ------------
 Changelog 
 ============
 
-20110415 : add yui3 support, set ver 0.9b
+20110415 : add yui3 support, set ver 0.9b, custom style for metabox
 
 20110404 : adding shortcodes for fan gating
 
