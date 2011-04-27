@@ -1,6 +1,7 @@
-<div id="fbpage-options">
+<!-- custom fields for fb credentials -->
 
-	<h4>Facebook App Details</h4>
+<div id="fbpage-options">
+	<p>Be sure to enter your fb-app credentials here.</p>
 	<dl>
 	<dt><label for="_myfbapp[app_id]"><?php echo  __("Fb App ID", 'myfbpage_textdomain' ); ?> </label> </dt>
 		 <dd><input type="text" id="_myfbapp[app_id]" name="_myfbapp[app_id]" value="<?php if(!empty($myfbapp['app_id'])) echo $myfbapp['app_id']; ?>"  /></dd>
@@ -13,13 +14,4 @@
 	
 	</dl>
 	<hr class="clear" />
-	<h4>Facebook Page Options</h4>
-	
-	<dl>
-   <dt><label for="_myfbapp[app_secret]"><?php echo  __("Fb Show Title", 'myfbpage_textdomain' ); ?> </label> </dt>
-			<dd><input  type="checkbox" <?php if ( $myfbapp['showtitle'] !== 'showtitle' ){ echo ''; } else {echo 'checked="checked"';} ?>" id="_myfbapp[showtitle]" name="_myfbapp[showtitle]" value="showtitle" /></dd>
-	</dl>	
-	
-	
-	<hr class="clear" />		
 	</div>
