@@ -1,0 +1,65 @@
+/* default skin/color-theme */
+/*base skin color & style*/
+img{
+	vertical-align:middle;
+}
+a img{
+	border:none transparent;
+}
+a{
+}
+a:hover{
+
+}
+a:visited{
+	
+}
+/*layout*/
+#fb1 #wrapper{
+	background:#f0f0f0 url("https://sites.google.com/site/pushlabplus1/files/bg.png") repeat;
+	border-top: 2px solid #111;
+}
+.fbcont { /*content start*/
+
+}
+.maincol{
+
+	}
+	#content .maincol h2, #content .maincol h3, #content .maincol h4 {
+
+	}
+.sidecol{
+
+	}
+	.sidecol.right{
+
+	}
+	.sidecol.left{
+
+	}
+
+#likeus{
+	background-color:#900;
+	border-bottom: 2px solid #C00;
+	color:#fff;
+}
+#likeus_txt{
+}
+	#likeus .shout{
+	}
+	#likeus .sub{
+		font-size:12px;
+	}
+	
+/*fan gating*/
+	
+		.liked, .unliked{
+			
+			color:#808080;
+		
+			}
+		
+			.liked .rewards{
+				
+				}
+		.unliked{}	

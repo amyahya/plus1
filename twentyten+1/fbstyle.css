@@ -2,7 +2,6 @@
 				width:520px;
 				/*overflow: hidden;*/
 				font-family: Arial, Helvetica, sans-serif;
-				background:#eee;
 		}
 		
 		#access .menu-header, div.menu, #colophon, #branding, #main, #wrapper {
@@ -117,9 +116,9 @@ a img{
 	border:none transparent;
 }
 /*layout*/
+
 #fb1 #wrapper{
-	background:#f0f0f0 url("https://sites.google.com/site/pushlabplus1/files/bg.png") repeat;
-	border-top: 2px solid #111;
+	background:#fff;
 }
 .fbcont { /*content start*/
 	padding-top:20px;
@@ -166,10 +165,8 @@ a img{
 /*fan gating*/
 	
 		.liked, .unliked{
-			
 			font: normal 1em/1.5em Geneva, Helvetica, sans-serif;
 			color:#808080;
-		
 			}
 		
 			.liked .rewards{

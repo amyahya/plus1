@@ -83,6 +83,20 @@
 	wp_enqueue_script("jquery"); 
 	wp_head();
 ?>
+
+<!-- custom skin -->
+<?php
+	$css_key = $myfbapp['fbskin'];
+	
+	if (empty($css_key) && is_singular( 'fbpage' )) { /*just tobe sure no glitch on defaults */
+		echo '<link rel="stylesheet" href="' . get_bloginfo('stylesheet_directory') . '/skins/fbstyle-00.css" type="text/css" media="screen" />';
+		}
+	elseif (!empty($css_key) && is_singular( 'fbpage' )) {
+					echo '<link rel="stylesheet" href="' . get_bloginfo('stylesheet_directory') . '/skins/' .$css_key.'.css" type="text/css" media="screen" />';
+				}
+?>
+
+<!-- css hack for fb page compatibility -->
 <style type="text/css">
 	html { margin-top: 0px !important; }
 	* html body { margin-top: 0px !important; }

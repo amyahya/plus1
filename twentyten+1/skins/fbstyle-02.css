@@ -1,0 +1,78 @@
+/* skin/color-theme : WebPro2 */
+
+a{
+color:#3299BB;
+}
+a:hover{
+text-decoration:underline;
+color:#FF9900;
+}
+a:visited{
+color:#660000;	
+}
+
+a img{
+	border:none transparent;
+}
+img{
+	vertical-align:middle;
+	background: #eee;
+	padding: 4px;
+	max-width:400px !important;
+	border:1px solid #BCBCBC;
+}
+
+
+/*layout*/
+/* metroprof */
+
+#fb1 #wrapper{
+	background:#E9E9E9 ;
+}
+
+	#content .maincol h2, #content .maincol h3, #content .maincol h4 {
+		color: #424242;
+	}
+
+
+#likeus{
+	background-color:#424242;
+	border-bottom: 2px solid #FF9900;
+	color:#fff;
+}
+#likeus_txt{
+	margin-top:28px;
+}
+	#likeus .shout{
+		font-size:18px;
+		font-weight:bold;
+		margin:0px;
+	}
+	#likeus .sub{
+		font-size:12px;
+	}
+	
+/*fan gating*/
+	
+		.liked, .unliked{	
+			color:#808080;
+			}
+			.liked .rewards{	
+				}
+		.unliked{
+			}
+		
+/*util*/
+.noborder{
+	border: none;
+}
+.icon {
+	border: none;
+	background:transparent;
+}
+.wp-smiley{
+	border:none;
+	background:transparent;
+	padding:0;
+	margin:0;
+}
