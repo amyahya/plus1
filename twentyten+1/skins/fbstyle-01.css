@@ -29,6 +29,30 @@ img{
 #fb1 #wrapper{
 	background:#fff ;
 }
+		#content h2, #content h3, #content h4 {
+		color: #00B4FF;
+	}
+	
+	#content h5, #content h6{
+	font-family: Verdana, Sans-Serif;	
+	}
+	#content h2 {
+	font-size:1.7em
+	}
+	#content h3{
+	font-size:1.6em	
+	} 
+	#content h4{
+	font-size:1.4em;	
+	}
+	#content h5{
+	font-size:1.2em;
+	}
+	#content h6{
+	font-size:1em;	
+	font-weight:bold;	
+	}
+
 
 #likeus{
 	background-color:#00B4FF;
@@ -56,6 +80,12 @@ img{
 				}
 		.unliked{
 			}
+
+
+/*footer */
+#colophon{
+	border-top:4px solid #00B4FF;
+}			
 		
 /*util*/
 .noborder{

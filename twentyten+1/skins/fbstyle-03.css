@@ -1,0 +1,159 @@
+/* skin/color-theme : K2 */
+
+a, a:link, a:active{
+color:#27d;
+text-decoration:none;
+}
+a:hover{
+text-decoration:underline;
+}
+a:visited{
+color:#b41;	
+text-decoration:none;
+}
+
+a img{
+	border:none transparent;
+}
+img{
+	vertical-align:middle;
+	background: #eee;
+	padding: 4px;
+	max-width:400px !important;
+	border:1px solid #BCBCBC;
+}
+
+
+blockquote{
+	margin: 20px 0;
+	padding: 0 20px 0 50px;
+	color: #333;
+	background: url('i-03/quote.png') no-repeat 10px 0;
+	border: none;
+
+}
+
+
+/*layout*/
+
+#fb1 {
+	
+}
+#fb1 #wrapper{
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, Sans-Serif;
+	background: #eee;
+	font-size: 10px;
+	
+}
+
+	#content h2, #content h3, #content h4 {
+	font-family: "Trebuchet MS", Verdana, Sans-Serif;
+	}
+	#content h5, #content h6{
+	font-family: Verdana, Sans-Serif;	
+	}
+	#content h2 {
+	font-size:1.7em
+	}
+	#content h3{
+	font-size:1.6em	
+	} 
+	#content h4{
+	font-size:1.4em;	
+	}
+	#content h5{
+	font-size:1.2em;
+	}
+	#content h6{
+	font-size:1em;	
+	font-weight:bold;	
+	}
+
+#fb1 #main{
+	background: #fff;
+	border: 1px solid #ddd;
+	font-size: 1.2em;
+	line-height: 2.2em;
+	color: #444;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+}
+
+.entry-content {
+color: #444;
+}
+
+#fb1 p{
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+#likeus{
+	background-color:#3371A3;
+	margin: 13px 0 0;
+	border-bottom: none;
+	color:#fff;
+	height:120px;
+}
+#likeus_txt{
+	margin-top:28px;
+	
+	
+}
+	#likeus .shout{
+		font-size:20px;
+		font-weight:normal;
+		margin:0px;
+		font-family: "Trebuchet MS", Verdana, Sans-Serif;
+	}
+	#likeus .sub{
+		font-size:12px;
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, Sans-Serif;
+	}
+	
+/*fan gating*/
+	
+		.liked, .unliked{	
+			color:#444;
+			}
+			.liked .rewards{	
+				}
+		.unliked{
+			}
+
+
+.video{
+	background: #eee;
+	padding: 4px;
+	max-width:480px !important;
+	border:1px solid #BCBCBC;
+}
+			
+			
+/*footer */
+#colophon{
+	border-top:none;
+}			
+			
+		
+/*util*/
+.noborder{
+	border: none;
+}
+.icon {
+	border: none;
+	background:transparent;
+}
+.wp-smiley{
+	border:none;
+	background:transparent;
+	padding:0;
+	margin:0;
+}

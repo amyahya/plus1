@@ -101,12 +101,14 @@ hr.clear, #content hr.clear{
 .fleft, .alignleft, img.alignleft{
 	float:left;
 	margin-right:10px;
+	margin-left: 2px;
 	margin-bottom:10px;
 }
 
 .fright, .alignright, img.alignright {
 	float:right;
 	margin-left: 10px;
+	margin-right:2px;
 	margin-bottom:10px;
 }
 img{
@@ -172,4 +174,10 @@ a img{
 			.liked .rewards{
 				
 				}
-		.unliked{}	
+		.unliked{}
+
+/*embedded video container*/
+.video{
+	width:480px;
+	margin:1em auto;
+}

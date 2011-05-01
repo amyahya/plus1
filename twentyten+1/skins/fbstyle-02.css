@@ -1,11 +1,12 @@
 /* skin/color-theme : WebPro2 */
 
-a{
-color:#3299BB;
+a, a:link, a:active{
+color:#f60;
+font-weight:bold;
 }
 a:hover{
 text-decoration:underline;
-color:#FF9900;
+color:#f30;
 }
 a:visited{
 color:#660000;	
@@ -23,15 +24,22 @@ img{
 }
 
 
+blockquote{
+	font: bold italic 14px/18px "Palatino Linotype",Palatino, sans-serif;
+	color:#555;
+
+}
+
+
 /*layout*/
-/* metroprof */
+
 
 #fb1 #wrapper{
 	background:#E9E9E9 ;
 }
 
-	#content .maincol h2, #content .maincol h3, #content .maincol h4 {
-		color: #424242;
+	#content h2, #content h3, #content h4 {
+		border-bottom:1px solid #f90;
 	}
 
 
@@ -55,12 +63,19 @@ img{
 /*fan gating*/
 	
 		.liked, .unliked{	
-			color:#808080;
+			color:#444;
 			}
 			.liked .rewards{	
 				}
 		.unliked{
 			}
+
+
+/*footer */
+#colophon{
+	border-top:4px solid #f90;
+}			
+			
 		
 /*util*/
 .noborder{

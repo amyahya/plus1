@@ -1,0 +1,224 @@
+/* skin/color-theme : Batik */
+
+a, a:link, a:active{
+font-weight:700;
+color:#8F3D00;
+text-decoration:none;
+border-bottom: 1px transparent;
+}
+a:hover{
+color: #E6E1DF;
+border-bottom: 1px dotted #8F3D00;
+}
+a:visited{
+color:#8F0800;	
+text-decoration:none;
+border-bottom: 1px transparent;
+}
+
+a img{
+	border:none transparent;
+}
+img{
+	vertical-align:middle;
+	padding: 3px;
+	max-width:400px !important;
+	border:1px dotted #E6E1DF;
+}
+
+
+blockquote{
+	margin: 20px 0 20px 20px;
+	padding: 0 20px 0 12px;
+	color: #E6E1DF;
+	font:bold 14px/20px Baskerville,Georgia,Cambria,Times,Times New Roman,serif;
+	text-shadow:
+     		-1px -1px 0 #57341D,
+      	1px -1px 0 #57341D,
+      	-1px 1px 0 #57341D,
+       	1px 1px 0 #57341D;
+	
+}
+
+
+/*layout*/
+
+#fb1 {
+	font-family: Georgia, serif;
+}
+#fb1 #wrapper{
+	background: #0B0412;
+	color:#F1EEED;
+	font-size: 10px;
+	margin:0;
+	
+}
+#fb1 #content{
+	color:#F1EEED;
+}
+
+#fb1 #main{
+	background: #0B0412;
+	font-size: 1.2em;
+	line-height: 2.2em;
+	margin:0 auto;
+}
+
+
+	#content h1, #content h2, #content h3, #content h4 {
+	font-family: Georgia, serif;
+	font-weight:bold;
+	color:#F1EEED;
+	text-shadow:
+     		-1px -1px 0 #57341D,
+      	1px -1px 0 #57341D,
+      	-1px 1px 0 #57341D,
+       	1px 1px 0 #57341D;
+   text-align:center;
+   border-bottom: 1px dotted #9F7153;
+	}
+	#content h5, #content h6{
+		color:#F1EEED;	
+	}
+	
+	
+	#content h1, #content h2{
+		text-indent: 0.3em;
+		padding-bottom:0.2em;
+		margin:6px;
+		
+	}
+	
+	#content h1 {
+	font-size:1.9em;
+	}
+	#content h2 {
+	font-size:1.7em;
+	}
+	#content h3{
+	font-size:1.6em;
+	} 
+	#content h4{
+	font-size:1.4em;	
+	}
+	#content h5{
+	font-size:1.2em;
+	}
+	#content h6{
+	font-size:1em;	
+	font-weight:bold;	
+	}
+
+.entry-content {
+
+margin:0 2px;
+}
+
+#fb1 p{
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+#likeus{
+	background-color:#8F3D00;
+	border-bottom: 1px dotted #E6E1DF;
+	color:#fff;
+	height:120px;
+	margin:0 -4px;
+}
+#likeus_txt{
+	margin-top:28px;
+	
+	
+}
+	#likeus .shout{
+		margin:-1em 0 0;
+		font: normal 24px "Palatino linotype", Palatino, Georgia, serif;
+		letter-spacing:0.05em;
+   	/*text-shadow:
+     		-1px -1px 0 #42281C,
+      	1px -1px 0 #42281C,
+      	-1px 1px 0 #42281C,
+       	1px 1px 0 #42281C;*/
+		color: #EAB800;
+	}
+	#likeus .sub{
+		font-size:10px;
+		font-family: Georgia, serif;
+	}
+	
+/*fan gating*/
+	
+		.liked, .unliked{	
+			color: #E6E1DF;
+		 	font-family:Georgia, serif;
+			}
+			
+			.liked .rewards{	
+				}
+		.unliked{
+			}
+
+
+.video{
+	
+	max-width:480px !important;
+	padding: 3px;
+	border:1px dotted #E6E1DF;
+}
+			
+			
+/*footer */
+#footer{
+	margin-bottom:0;
+}
+#colophon{
+	border-top:2px dotted #E6E1DF;
+	background:#7D4B29;
+	color:#C8B2A5;
+}			
+#colophon a{
+	color: #fff;
+}
+#colophon a:hover{
+	color: #fff;
+	text-decoration:none;
+}			
+		
+/*util*/
+.noborder{
+	border: none;
+}
+.icon {
+	border: none;
+	background:transparent;
+	-moz-box-shadow: 0 0 0 transparent;
+  	-webkit-box-shadow:0 0 0 transparent;
+  	box-shadow: 0 0 0 transparent;
+}
+.wp-smiley{
+	border:none;
+	background:transparent;
+	padding:0;
+	margin:0;
+	-moz-box-shadow: 0 0 0 transparent;
+  	-webkit-box-shadow: 0 0 0 transparent;
+  	box-shadow: 0 0 0 transparent;
+}
+
+.fleft, .alignleft, img.alignleft{
+	float:left;
+	margin-right:12px;
+	margin-left: 6px;
+	margin-bottom:12px;
+}
+
+.fright, .alignright, img.alignright {
+	float:right;
+	margin-left: 12px;
+	margin-right:6px;
+	margin-bottom:12px;
+}

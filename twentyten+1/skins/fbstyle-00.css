@@ -19,6 +19,30 @@ a:visited{
 	background:#f0f0f0 url("https://sites.google.com/site/pushlabplus1/files/bg.png") repeat;
 	border-top: 2px solid #111;
 }
+
+	#content h2, #content h3, #content h4 {
+	
+	}
+	#content h5, #content h6{
+	
+	}
+	#content h2 {
+	font-size:1.7em
+	}
+	#content h3{
+	font-size:1.6em	
+	} 
+	#content h4{
+	font-size:1.4em;	
+	}
+	#content h5{
+	font-size:1.2em;
+	}
+	#content h6{
+	font-size:1em;	
+	font-weight:bold;	
+	}
+
 .fbcont { /*content start*/
 
 }
