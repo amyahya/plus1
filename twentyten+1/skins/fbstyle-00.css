@@ -2,6 +2,7 @@
 /*base skin color & style*/
 img{
 	vertical-align:middle;
+	border:1px solid #aaa;
 }
 a img{
 	border:none transparent;

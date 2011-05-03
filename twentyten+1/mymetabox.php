@@ -1,7 +1,7 @@
 <!-- custom fields for fb credentials -->
 
 <div id="fbpage-options">
-	<p>Be sure to enter your fb-app credentials here.</p>
+	<p class="mandatory" >Be sure to enter your fb-app credentials here.</p>
 	<dl>
 	<dt><label for="_myfbapp[app_id]"><?php echo  __("Fb App ID", 'myfbpage_textdomain' ); ?> </label> </dt>
 		 <dd><input type="text" id="_myfbapp[app_id]" name="_myfbapp[app_id]" value="<?php if(!empty($myfbapp['app_id'])) echo $myfbapp['app_id']; ?>"  /></dd>

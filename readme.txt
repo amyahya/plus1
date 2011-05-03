@@ -73,6 +73,10 @@ Creating just like the +1 page
 Changelog 
 ============
 
+20110503 : added skin selection, and textarea for css override capability
+
+20110425 : rearrange metaboxes
+
 20110415 : add yui3 support, set ver 0.9b, custom style for metabox
 
 20110404 : adding shortcodes for fan gating

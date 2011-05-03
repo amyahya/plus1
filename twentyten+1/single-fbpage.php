@@ -96,6 +96,15 @@
 				}
 ?>
 
+<?php 
+	if ( !empty($myfbapp['skinover']) ) {
+	echo '<!-- custom css / style override -->';
+	echo '<style type="text/css">';
+	echo $myfbapp['skinover'];
+	echo '</style>';
+	}
+?>
+
 <!-- css hack for fb page compatibility -->
 <style type="text/css">
 	html { margin-top: 0px !important; }
