@@ -64,7 +64,7 @@ for user that liked the page ( fans ) : "Thanks for liking us, we love you!"
 
 Creating just like the +1 page
 ----------------------------------------
-- Open the sample-content.html on the twentyten+1 folder
+- Open the sample-content.html on the plus1 folder
 - Create/edit the facebook page on wp-admin, copy the code from sample-content.html to the main text-input area.
 - publish and check how it looks on your fb page.
 
