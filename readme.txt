@@ -73,6 +73,8 @@ Creating just like the +1 page
 Changelog 
 ============
 
+20110507 : change folder name to plus1, just to be save :) 
+
 20110503 : added skin selection, and textarea for css override capability
 
 20110425 : rearrange metaboxes
